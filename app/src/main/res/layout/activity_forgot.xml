@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ViewController.ForgotActivity"
+    style="@style/cardActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarForgot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="@string/tvTitleForgot"
+        style="@style/toolbarForgot"
+        app:navigationIcon="@drawable/ic_back_24"/>
+
+    <ImageView
+        android:id="@+id/imgLockForgot"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/toolbarForgot"
+        style="@style/loginPassIcon"/>
+    <TextView
+        android:id="@+id/xtvTitleForgot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgLockForgot"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp"
+        android:text="@string/tvTitleForgot" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/xtvTitleForgot"
+        style="@style/CardView">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/activity">
+            <TextView
+                android:id="@+id/xtvInstructionsForgot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="20sp"
+                android:text="@string/tvInstructionsForgot"/>
+            <ImageView
+                android:id="@+id/imgCorreoForgot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/xtvInstructionsForgot"
+                android:layout_alignParentLeft="true"
+                style="@style/loginMailIcon" />
+            <EditText
+                android:id="@+id/xetCorreoForgot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/imgCorreoForgot"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/xtvInstructionsForgot"
+                android:hint="@string/etHintCorreo"/>
+            <Button
+                android:id="@+id/btnEnviarForgot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/xetCorreoForgot"
+                android:layout_centerHorizontal="true"
+                android:text="@string/btnSend"
+                style="@style/mainButton"/>
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

@@ -1,0 +1,107 @@
+<resources>
+    <!--Configuracion-->
+    <string name="app_name">ComSafe</string>
+    <string name="project_name">ComSafe Mobile Client</string>
+    <string name="app_version">0.0.1</string>
+    <string name="developedApp">Aplicación desarrollada por:</string>
+    <string name="developer1">Gustavo López González</string>
+    <string name="developedWeb">Sitio web desarrollado por:</string>
+    <string name="developer2">Victor Eduardo Ceja Martínez</string>
+    <string name="developer3">Aurora Méndez Castañeda</string>
+    <string name="developer4">Pedro Morales González</string>
+    <string name="tvTitleAbout">Acerca de</string>
+
+    <!--Login screen-->
+    <string name="tvTitleLogin">Iniciar Sesión</string>
+    <string name="etHintCorreo">Correo electrónico</string>
+    <string name="etHintContrasena">Contraseña</string>
+    <string name="btnLogin">Iniciar sesión</string>
+    <string name="btnForgot">Olvidé mi contraseña</string>
+    <string name="btnAccount">No tengo una cuenta</string>
+    <string name="copyright">©️ ComSafe 2022</string>
+    <string name="dialog_create_account_msj">Para crear su cuenta, acuda a las oficinas administrativas con su último comprobante de pago
+y de domicilio.</string>
+    <string name="dialog_login_error_msj">Usuario o contraseña incorrectos.</string>
+    <string name="dialog_com_error_msj">Error al conectarse con el servicio en línea.</string>
+
+    <!--Forgot password screen-->
+    <string name="tvTitleForgot">Recuperar contraseña</string>
+    <string name="tvInstructionsForgot">Introduce el correo electrónico con el que inicias sesión, luego, presiona "Enviar".</string>
+    <string name="btnSend">Enviar</string>
+
+    <!--Main menu-->
+    <string name="tvTitleMainMenu">Inicio</string>
+    <string name="bienvenida">Bienvenido</string>
+    <string name="btnMore">Ver más...</string>
+    <string name="visitas">Visitas</string>
+    <string name="reservas">Reservas</string>
+    <string name="automoviles">Automóviles</string>
+
+    <!--Profile-->
+    <string name="tvTitleProfile">Mi información</string>
+    <string name="tvNombreProfile">Nombre de usuario</string>
+    <string name="tvSubtitle1">Tu numero de contrato es: </string>
+    <string name="tvSubtitle2">Datos de usuario:</string>
+    <string name="tvInfo1">7635280001-</string>
+    <string name="tvInfo2">CURP:</string>
+    <string name="tvInfo3">Fecha de nacimiento:</string>
+    <string name="tvInfo4">Sexo:</string>
+    <string name="btnEditar">Editar</string>
+    <string name="btnLogout">Cerrar sesión</string>
+    <string name="ContratoCopied">Número de contrato copiado al portapapeles</string>
+
+    <!--Visitas-->
+    <string name="tvTitleVisitas">Visitas</string>
+    <string name="tvSubtitleVisitas">Historial de visitas</string>
+    <string name="tvInstructionsVisitas">Seleccione una visita que aún no haya finalizado para editarla o registre una nueva con el botón +.</string>
+
+    <!--Reservas-->
+    <string name="tvTitleReservas">Reservas</string>
+    <string name="tvSubtitleReservas">Historial de reservas</string>
+    <string name="tvInstructionsReservas">Seleccione una reserva que aún no haya ocurrido para editarla o reserve un área con el botón +.</string>
+
+    <!--Automoviles-->
+    <string name="tvTitleAutomoviles">Automóviles</string>
+    <string name="tvSubtitleAutomoviles">Automoviles registrados</string>
+    <string name="tvInstructionsAutomoviles">Seleccione uno de sus automoviles para modificar su información o agregue uno nuevo con el botón +.</string>
+
+    <!--Reportes-->
+    <string name="tvTitleReportes">Reportes</string>
+    <string name="tvSubtitleReportes">Historial de reportes de mantenimiento</string>
+    <string name="tvInstructionsReportes">Seleccione uno de sus reportes no atendidos para modificarlo o genere uno nuevo con el botón +.</string>
+
+    <!--Quejas-->
+    <string name="tvTitleQuejas">Quejas</string>
+    <string name="tvSubtitleQuejas">Historial de quejas</string>
+    <string name="tvInstructionsQuejas">Seleccione uno de sus reportes de queja no atendidos para modificarlo o genere uno nuevo con el botón +.</string>
+
+    <!--General dialog-->
+    <string name="dialog_warning_title">Aviso</string>
+    <string name="dialog_error_title">Error</string>
+    <string name="accept">Aceptar</string>
+
+    <!--DB-API Conection-->
+    <string name="dbAPI">https://isw-api.000webhostapp.com/</string>
+
+    <!--Nav drawer items-->
+    <string name="action_settings">Configuración</string>
+    <string name="action_search">Buscar</string>
+    <string name="drawer_open">Abrir</string>
+    <string name="drawer_close">Cerrar</string>
+    <string-array name="nav_drawer_labels">
+        <item>@string/nav_item_profile</item>
+        <item>@string/nav_item_home</item>
+        <item>@string/nav_item_visitas</item>
+        <item>@string/nav_item_reservas</item>
+        <item>@string/nav_item_automoviles</item>
+        <item>@string/nav_item_reportes</item>
+        <item>@string/nav_item_quejas</item>
+    </string-array>
+    <string name="nav_item_home">Inicio</string>
+    <string name="nav_item_profile">Mi información</string>
+    <string name="nav_item_visitas">Visitas</string>
+    <string name="nav_item_reservas">Reservas</string>
+    <string name="nav_item_automoviles">Automóviles</string>
+    <string name="nav_item_reportes">Reportes</string>
+    <string name="nav_item_quejas">Quejas</string>
+</resources>
