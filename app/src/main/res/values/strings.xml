@@ -40,12 +40,12 @@ y de domicilio.</string>
     <!--Profile-->
     <string name="tvTitleProfile">Mi información</string>
     <string name="tvNombreProfile">Nombre de usuario</string>
-    <string name="tvSubtitle1">Tu numero de contrato es: </string>
-    <string name="tvSubtitle2">Datos de usuario:</string>
+    <string name="tvSubtitle1">Número de contacto</string>
+    <string name="tvSubtitle2">Datos de usuario</string>
     <string name="tvInfo1">7635280001-</string>
-    <string name="tvInfo2">CURP:</string>
-    <string name="tvInfo3">Fecha de nacimiento:</string>
-    <string name="tvInfo4">Sexo:</string>
+    <string name="tvInfo2">CURP</string>
+    <string name="tvInfo3">Fecha de nacimiento</string>
+    <string name="tvInfo4">Sexo</string>
     <string name="btnEditar">Editar</string>
     <string name="btnLogout">Cerrar sesión</string>
     <string name="ContratoCopied">Número de contrato copiado al portapapeles</string>

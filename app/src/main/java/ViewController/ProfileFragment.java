@@ -17,7 +17,7 @@ public class ProfileFragment extends Fragment implements OnClickListener {
     private SharedPreferences sp;
     private Button jbtnLogout, jbtnEditProfile;
     private ImageButton jbtnCopy;
-    private TextView tvCURP,tvNombre,tvContrato,tvSexo,tvFecha;
+    private TextView tvCURP,tvNombre,tvContrato,tvSexo,tvFecha,tvCURP2,tvFecha2,tvSexo2;
     private View rootView;
     private String nombre,paterno,materno,tipo,contrato,curp,fechaNac,sexo;
 
@@ -45,15 +45,18 @@ public class ProfileFragment extends Fragment implements OnClickListener {
         jbtnCopy = rootView.findViewById(R.id.btnCopy);
         tvNombre = rootView.findViewById(R.id.xtvNombreProfile);
         tvCURP = rootView.findViewById(R.id.xtvInfo2);
+        tvCURP2 = rootView.findViewById(R.id.xtvCURP);
         tvContrato = rootView.findViewById(R.id.xtvInfo1);
         tvFecha = rootView.findViewById(R.id.xtvInfo3);
+        tvFecha2 = rootView.findViewById(R.id.xtvFechNac);
         tvSexo = rootView.findViewById(R.id.xtvInfo4);
+        tvSexo2 = rootView.findViewById(R.id.xtvSexo);
 
         tvNombre.setText(nombre+" "+paterno+" "+materno);
-        tvCURP.setText(tvCURP.getText() + " " + curp);
+        tvCURP2.setText(curp);
         tvContrato.setText(contrato);
-        tvFecha.setText(tvFecha.getText() + " " + fechaNac);
-        tvSexo.setText(tvSexo.getText() + " " + sexo);
+        tvFecha2.setText(fechaNac);
+        tvSexo2.setText(sexo);
         jbtnLogout.setOnClickListener(this);
         jbtnEditProfile.setOnClickListener(this);
         jbtnCopy.setOnClickListener(this);
