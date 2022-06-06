@@ -99,6 +99,12 @@
         <item name="android:src">@drawable/ic_copy_dark_24</item>
     </style>
 
+    <!--Profile edition-->
+    <style name="btnCalendar">
+        <item name="android:src">@drawable/ic_calendar_dark_24</item>
+        <item name="android:backgroundTint">@color/black</item>
+    </style>
+
     <!--Nav menu-->
     <style name="imgUser">
         <item name="android:src">@drawable/ic_user_dark_24</item>

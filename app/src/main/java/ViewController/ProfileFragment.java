@@ -9,16 +9,17 @@ import android.view.View.OnClickListener;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+
 import com.example.comsafe.R;
 import android.content.ClipboardManager;
 
 public class ProfileFragment extends Fragment implements OnClickListener {
-    SharedPreferences sp;
-    Button jbtnLogout, jbtnEditProfile;
-    ImageButton jbtnCopy;
-    TextView tvCURP,tvNombre,tvContrato,tvSexo,tvFecha;
-    View rootView;
-    String nombre,paterno,materno,tipo,contrato,curp,fechaNac,sexo;
+    private SharedPreferences sp;
+    private Button jbtnLogout, jbtnEditProfile;
+    private ImageButton jbtnCopy;
+    private TextView tvCURP,tvNombre,tvContrato,tvSexo,tvFecha;
+    private View rootView;
+    private String nombre,paterno,materno,tipo,contrato,curp,fechaNac,sexo;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -92,7 +93,8 @@ public class ProfileFragment extends Fragment implements OnClickListener {
             this.getActivity().finish();
         }
         if(view.getId()==R.id.btnEditProfile){
-            //todo nav to edit fragment
+            Intent itn = new Intent(rootView.getContext(), ProfileEditActivity.class);
+            startActivity(itn);
         }
         if(view.getId()==R.id.btnCopy){
             //Copiar num contrato al portapapeles

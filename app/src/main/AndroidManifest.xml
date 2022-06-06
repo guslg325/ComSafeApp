@@ -5,7 +5,7 @@
     android:versionCode="1"
     android:versionName="0.1.0">
 
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -24,6 +24,9 @@
             android:exported="true" />
         <activity
             android:name="ViewController.FragmentHolderActivity"
+            android:exported="true"/>
+        <activity
+            android:name="ViewController.ProfileEditActivity"
             android:exported="true"/>
         <activity
             android:name="ViewController.SplashScreen"

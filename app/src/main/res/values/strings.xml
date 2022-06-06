@@ -50,6 +50,15 @@ y de domicilio.</string>
     <string name="btnLogout">Cerrar sesión</string>
     <string name="ContratoCopied">Número de contrato copiado al portapapeles</string>
 
+    <!--Edit profile-->
+    <string name="tvTitleEditProfile">Editar información personal</string>
+    <string-array name="sexArray">
+        <item>Hombre</item>
+        <item>Mujer</item>
+    </string-array>
+    <string name="btnCancel">Cancelar</string>
+    <string name="btnSave">Guardar</string>
+
     <!--Visitas-->
     <string name="tvTitleVisitas">Visitas</string>
     <string name="tvSubtitleVisitas">Historial de visitas</string>
@@ -84,7 +93,7 @@ y de domicilio.</string>
     <string name="dbAPI">https://isw-api.000webhostapp.com/</string>
 
     <!--Nav drawer items-->
-    <string name="action_settings">Configuración</string>
+    <string name="action_settings">Acerca de</string>
     <string name="action_search">Buscar</string>
     <string name="drawer_open">Abrir</string>
     <string name="drawer_close">Cerrar</string>
