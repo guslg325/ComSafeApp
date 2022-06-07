@@ -29,6 +29,9 @@
             android:name="ViewController.ProfileEditActivity"
             android:exported="true"/>
         <activity
+            android:name="ViewController.CarEditActivity"
+            android:exported="true"/>
+        <activity
             android:name="ViewController.SplashScreen"
             android:exported="true"
             android:theme="@style/SplashScreenStyle">

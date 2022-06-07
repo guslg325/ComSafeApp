@@ -74,6 +74,27 @@ y de domicilio.</string>
     <string name="tvSubtitleAutomoviles">Automoviles registrados</string>
     <string name="tvInstructionsAutomoviles">Seleccione uno de sus automoviles para modificar su información o agregue uno nuevo con el botón +.</string>
     <string name="dialog_session_error_msj">El usuario activo no tiene CURP asociada. Cierre sesión y vuelva a intentarlo.</string>
+    <string name="tvTitleCarEdit">Editar automóvil</string>
+    <string name="tvBrandTag">Marca de automóvil</string>
+    <string name="tvModelTag">Modelo de automóvil</string>
+    <string name="tvPlatesTag">Placas del automóvil</string>
+    <string name="tvCarColorTag">Color del automóvil</string>
+    <string name="strColorRed">Rojo</string>
+    <string name="strColorBlue">Azul</string>
+    <string name="strColorCyan">Cyan</string>
+    <string name="strColorGuinda">Guinda</string>
+    <string name="strColorWhite">Blanco</string>
+    <string name="strColorGray">Gris</string>
+    <string name="strColorGreen">Verde</string>
+    <array name="carColors">
+        <item>@string/strColorRed</item>
+        <item>@string/strColorBlue</item>
+        <item>@string/strColorCyan</item>
+        <item>@string/strColorGuinda</item>
+        <item>@string/strColorWhite</item>
+        <item>@string/strColorGray</item>
+        <item>@string/strColorGreen</item>
+    </array>
 
     <!--Reportes-->
     <string name="tvTitleReportes">Reportes</string>

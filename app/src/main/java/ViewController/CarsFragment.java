@@ -1,26 +1,19 @@
 package ViewController;
 
 import android.app.Activity;
-import android.content.Context;
-import android.content.SharedPreferences;
+import android.content.*;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View.OnClickListener;
 import android.view.*;
 import android.widget.*;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
-import com.android.volley.AuthFailureError;
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
+import com.android.volley.*;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.comsafe.R;
-import org.json.JSONArray;
-import org.json.JSONObject;
+import org.json.*;
 import Dialogs.*;
 import LogicController.*;
 import java.util.*;
@@ -53,6 +46,16 @@ public class CarsFragment extends Fragment implements OnClickListener{
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 //TODO reaccionar a seleccionar un auto
+                Car c = (Car) adapterView.getItemAtPosition(i);
+
+                Intent itn = new Intent(getContext(),CarEditActivity.class);
+                Bundle bdl = new Bundle();
+                bdl.putString("marca",c.getBrand());
+                bdl.putString("modelo",c.getModel());
+                bdl.putString("placas",c.getPlates());
+                bdl.putString("carColor",c.getCarColor());
+                itn.putExtras(bdl);
+                startActivity(itn);
             }
         });
 
