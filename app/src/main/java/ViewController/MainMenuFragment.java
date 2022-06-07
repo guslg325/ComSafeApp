@@ -8,7 +8,6 @@ import android.view.*;
 import android.view.View.OnClickListener;
 import android.widget.*;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -73,7 +72,7 @@ public class MainMenuFragment extends Fragment implements OnClickListener{
                 title = getString(R.string.tvTitleReservas);
                 break;
             case R.id.btnMoreAutomoviles:
-                fragment = new AutomovilesFragment();
+                fragment = new CarsFragment();
                 title = getString(R.string.tvTitleAutomoviles);
                 break;
         }

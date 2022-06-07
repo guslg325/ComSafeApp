@@ -73,6 +73,7 @@ y de domicilio.</string>
     <string name="tvTitleAutomoviles">Automóviles</string>
     <string name="tvSubtitleAutomoviles">Automoviles registrados</string>
     <string name="tvInstructionsAutomoviles">Seleccione uno de sus automoviles para modificar su información o agregue uno nuevo con el botón +.</string>
+    <string name="dialog_session_error_msj">El usuario activo no tiene CURP asociada. Cierre sesión y vuelva a intentarlo.</string>
 
     <!--Reportes-->
     <string name="tvTitleReportes">Reportes</string>

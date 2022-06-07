@@ -53,7 +53,6 @@
                     android:id="@+id/btnCopy"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_above="@id/xtvSubtitle2"
                     android:layout_alignParentRight="true"
                     android:layout_marginEnd="20dp"
                     style="@style/btnCopyStyle"/>
@@ -72,7 +71,8 @@
             android:id="@+id/cardCurp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/xtvSubtitle2">
+            android:layout_below="@id/xtvSubtitle2"
+            style="@style/card">
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">

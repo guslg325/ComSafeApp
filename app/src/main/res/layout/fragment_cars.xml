@@ -40,9 +40,10 @@
         </RelativeLayout>
     </com.google.android.material.card.MaterialCardView>
     <ListView
-        android:id="@+id/lvRegistroVisitas"
+        android:id="@+id/lvRegistroAutomoviles"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/cvAutomoviles"/>
+        android:layout_below="@id/cvAutomoviles"
+        android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>

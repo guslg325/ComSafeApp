@@ -92,7 +92,7 @@ public class FragmentHolderActivity extends AppCompatActivity implements Fragmen
                 title = getString(R.string.tvTitleReservas);
                 break;
             case 4:
-                fragment = new AutomovilesFragment();
+                fragment = new CarsFragment();
                 title = getString(R.string.tvTitleAutomoviles);
                 break;
             case 5:
