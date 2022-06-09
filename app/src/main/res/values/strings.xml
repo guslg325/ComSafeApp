@@ -79,13 +79,13 @@ y de domicilio.</string>
     <string name="tvModelTag">Modelo de automóvil</string>
     <string name="tvPlatesTag">Placas del automóvil</string>
     <string name="tvCarColorTag">Color del automóvil</string>
-    <string name="strColorRed">Rojo</string>
-    <string name="strColorBlue">Azul</string>
-    <string name="strColorCyan">Cyan</string>
-    <string name="strColorGuinda">Guinda</string>
-    <string name="strColorWhite">Blanco</string>
-    <string name="strColorGray">Gris</string>
-    <string name="strColorGreen">Verde</string>
+    <string name="strColorRed">ROJO</string>
+    <string name="strColorBlue">AZUL</string>
+    <string name="strColorCyan">CYAN</string>
+    <string name="strColorGuinda">GUINDA</string>
+    <string name="strColorWhite">BLANCO</string>
+    <string name="strColorGray">GRIS</string>
+    <string name="strColorGreen">VERDE</string>
     <array name="carColors">
         <item>@string/strColorRed</item>
         <item>@string/strColorBlue</item>
@@ -95,6 +95,11 @@ y de domicilio.</string>
         <item>@string/strColorGray</item>
         <item>@string/strColorGreen</item>
     </array>
+    <string name="btnDelete">Eliminar</string>
+    <string name="dialog_update_car_success">Actualización de datos exitosa.</string>
+    <string name="dialog_update_car_fail">Error al actualizar los datos.</string>
+    <string name="dialog_update_car_confirm">¿Está seguro que desea eliminar este automóvil del sistema?</string>
+    <string name="tvTitleCarAdd">Registrar automóvil</string>
 
     <!--Reportes-->
     <string name="tvTitleReportes">Reportes</string>

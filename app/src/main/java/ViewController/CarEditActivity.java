@@ -1,18 +1,36 @@
 package ViewController;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.*;
 import android.view.View.OnClickListener;
 import android.widget.*;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.DialogFragment;
+
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.comsafe.R;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import Dialogs.*;
 
 public class CarEditActivity extends AppCompatActivity implements OnClickListener{
     Spinner spinner;
     Bundle bdl;
     TextView tvMarca,tvModelo,tvPlaca;
-    Button jbtnCarCancel,jbtnCarSave;
+    Button jbtnCarCancel,jbtnCarSave,jbtnCarDelete;
     Toolbar jtb;
 
     @Override
@@ -26,6 +44,7 @@ public class CarEditActivity extends AppCompatActivity implements OnClickListene
         spinner = findViewById(R.id.spnCarColor);
         jbtnCarCancel = findViewById(R.id.btnCarCancel);
         jbtnCarSave = findViewById(R.id.btnCarSave);
+        jbtnCarDelete = findViewById(R.id.btnCarDelete);
 
         //Configure toolbar
         jtb = findViewById(R.id.toolbarCarEdit);
@@ -48,6 +67,7 @@ public class CarEditActivity extends AppCompatActivity implements OnClickListene
         tvPlaca.setText(bdl.getString("placas"));
         jbtnCarCancel.setOnClickListener(this);
         jbtnCarSave.setOnClickListener(this);
+        jbtnCarDelete.setOnClickListener(this);
 
         if(bdl.getString("carColor").equals(getString(R.string.strColorRed))){
             //Rojo
@@ -80,9 +100,61 @@ public class CarEditActivity extends AppCompatActivity implements OnClickListene
                 finish();
                 break;
             case R.id.btnCarSave:
-                //TODO update database
+                updateCar(spinner.getSelectedItem().toString(),tvPlaca.getText().toString());
+                break;
+            case R.id.btnCarDelete:
+                DialogFragment dialogo = new CreateDeleteConfirmationDialog();
+                dialogo.show(getSupportFragmentManager(),"car delete");
                 break;
             default:
         }
+    }
+
+    void updateCar(String c, String p){
+        String url = getString(R.string.dbAPI) + "updateCar.php/";
+
+        StringRequest sr = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                if(!response.isEmpty()){
+                    //Si existen datos
+                    try{
+                        JSONObject jsonobj = new JSONObject(response);
+                        if(jsonobj.getBoolean("status")){
+                            //Correct update
+                            DialogFragment success = new CreateUpdateSuccessfulDialog();
+                            success.show(getSupportFragmentManager(),"update success");
+                        }else{
+                            //Error en update
+                            DialogFragment fail = new CreateUpdateFailureDialog();
+                            fail.show(getSupportFragmentManager(),"update failed");
+                        }
+                    }catch(Exception e){
+                        Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_LONG).show();
+                    }
+                }else{
+                    //Error
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                //Poner dialogo de error
+                DialogFragment dialogo = new CreateComErrorDialog();
+                dialogo.show(getSupportFragmentManager(),"communication error");
+            }
+        }){
+            @Nullable
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String,String> parametros = new HashMap<String,String>();
+                parametros.put("color",c);
+                parametros.put("placas",p);
+                return parametros;
+            }
+        };
+
+        RequestQueue rq = Volley.newRequestQueue(this);
+        rq.add(sr);
     }
 }

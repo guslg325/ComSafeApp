@@ -45,7 +45,6 @@ public class CarsFragment extends Fragment implements OnClickListener{
         lvRegAutomoviles.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                //TODO reaccionar a seleccionar un auto
                 Car c = (Car) adapterView.getItemAtPosition(i);
 
                 Intent itn = new Intent(getContext(),CarEditActivity.class);
@@ -78,6 +77,9 @@ public class CarsFragment extends Fragment implements OnClickListener{
     public void onClick(View v){
         switch(v.getId()){
             case R.id.btnAddAutomoviles:
+                //TODO intent to add car
+                Intent itn = new Intent(getContext(), CarAddActivity.class);
+                startActivity(itn);
                 break;
             default:
         }
