@@ -9,7 +9,7 @@ import androidx.fragment.app.DialogFragment;
 
 import com.example.comsafe.R;
 
-public class CreateUpdateSuccessfulDialog extends DialogFragment {
+public class UpdateSuccessfulDialog extends DialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         // Use the Builder class for convenient dialog construction

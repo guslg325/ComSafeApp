@@ -3,7 +3,6 @@ package ViewController;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.*;
 import android.view.View.OnClickListener;
@@ -103,7 +102,7 @@ public class CarEditActivity extends AppCompatActivity implements OnClickListene
                 updateCar(spinner.getSelectedItem().toString(),tvPlaca.getText().toString());
                 break;
             case R.id.btnCarDelete:
-                DialogFragment dialogo = new CreateDeleteConfirmationDialog();
+                DialogFragment dialogo = new DeleteConfirmationDialog();
                 dialogo.show(getSupportFragmentManager(),"car delete");
                 break;
             default:
@@ -122,11 +121,11 @@ public class CarEditActivity extends AppCompatActivity implements OnClickListene
                         JSONObject jsonobj = new JSONObject(response);
                         if(jsonobj.getBoolean("status")){
                             //Correct update
-                            DialogFragment success = new CreateUpdateSuccessfulDialog();
+                            DialogFragment success = new UpdateSuccessfulDialog();
                             success.show(getSupportFragmentManager(),"update success");
                         }else{
                             //Error en update
-                            DialogFragment fail = new CreateUpdateFailureDialog();
+                            DialogFragment fail = new UpdateFailureDialog();
                             fail.show(getSupportFragmentManager(),"update failed");
                         }
                     }catch(Exception e){
@@ -140,7 +139,7 @@ public class CarEditActivity extends AppCompatActivity implements OnClickListene
             @Override
             public void onErrorResponse(VolleyError error) {
                 //Poner dialogo de error
-                DialogFragment dialogo = new CreateComErrorDialog();
+                DialogFragment dialogo = new ComErrorDialog();
                 dialogo.show(getSupportFragmentManager(),"communication error");
             }
         }){

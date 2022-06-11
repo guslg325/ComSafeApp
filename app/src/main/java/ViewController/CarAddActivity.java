@@ -91,11 +91,11 @@ public class CarAddActivity extends AppCompatActivity implements OnClickListener
                         JSONObject jsonobj = new JSONObject(response);
                         if(jsonobj.getBoolean("status")){
                             //Correct update
-                            DialogFragment success = new CreateAddCarSuccessDialog();
+                            DialogFragment success = new AddCarSuccessDialog();
                             success.show(getSupportFragmentManager(),"update success");
                         }else{
                             //Error en update
-                            DialogFragment fail = new CreateAddCarFailureDialog();
+                            DialogFragment fail = new AddCarFailureDialog();
                             fail.show(getSupportFragmentManager(),"update failed");
                         }
                     }catch(Exception e){
@@ -109,7 +109,7 @@ public class CarAddActivity extends AppCompatActivity implements OnClickListener
             @Override
             public void onErrorResponse(VolleyError error) {
                 //Poner dialogo de error
-                DialogFragment dialogo = new CreateComErrorDialog();
+                DialogFragment dialogo = new ComErrorDialog();
                 dialogo.show(getSupportFragmentManager(),"communication error");
             }
         }){

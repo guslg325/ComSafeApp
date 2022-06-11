@@ -8,26 +8,18 @@ import android.content.DialogInterface;
 
 import com.example.comsafe.R;
 
-public class CreateDeleteConfirmationDialog extends DialogFragment {
+public class ComErrorDialog extends DialogFragment{
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         // Use the Builder class for convenient dialog construction
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        builder.setMessage(R.string.dialog_update_car_confirm)
+        builder.setMessage(R.string.dialog_com_error_msj)
                 .setPositiveButton(R.string.accept, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        //TODO update database (delete car)
-
+                        // START THE GAME!
                     }
                 })
-                .setNegativeButton(R.string.btnCancel, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int id) {
-                        //Dismiss dialog without changes
-                        dismiss();
-                    }
-                })
-                .setTitle(R.string.dialog_warning_title);
+                .setTitle(R.string.dialog_error_title);
         // Create the AlertDialog object and return it
         return builder.create();
     }

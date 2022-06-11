@@ -92,7 +92,7 @@ public class CarsFragment extends Fragment implements OnClickListener{
         String url = getString(R.string.dbAPI) + "getCars.php/";
 
         if(curp.equals("[curp]")){
-            DialogFragment dialogo = new CreateSessionErrorDialog();
+            DialogFragment dialogo = new SessionErrorDialog();
             dialogo.show(getParentFragmentManager(),"session error");
         }else{
             StringRequest sr = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
@@ -126,7 +126,7 @@ public class CarsFragment extends Fragment implements OnClickListener{
                 @Override
                 public void onErrorResponse(VolleyError error) {
                     //Poner dialogo de error
-                    DialogFragment dialogo = new CreateComErrorDialog();
+                    DialogFragment dialogo = new ComErrorDialog();
                     dialogo.show(getParentFragmentManager(),"communication error");
                 }
             }){

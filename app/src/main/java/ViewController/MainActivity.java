@@ -23,8 +23,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import Dialogs.CreateAccountDialog;
-import Dialogs.CreateComErrorDialog;
-import Dialogs.CreateLoginErrorDialog;
+import Dialogs.ComErrorDialog;
+import Dialogs.LoginErrorDialog;
 
 import com.example.comsafe.R;
 
@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
             String url = getString(R.string.dbAPI) + "getUser.php/";
 
             if(correo.isEmpty()||contrasena.isEmpty()){
-                DialogFragment dialogo = new CreateLoginErrorDialog();
+                DialogFragment dialogo = new LoginErrorDialog();
                 dialogo.show(getSupportFragmentManager(),"login error");
             }else{
                 StringRequest sr = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                             }
                         }else{
                             //Usuario o password incorrectas
-                            DialogFragment dialogo = new CreateLoginErrorDialog();
+                            DialogFragment dialogo = new LoginErrorDialog();
                             dialogo.show(getSupportFragmentManager(),"login error");
                         }
                     }
@@ -128,7 +128,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         //Poner dialogo de error
-                        DialogFragment dialogo = new CreateComErrorDialog();
+                        DialogFragment dialogo = new ComErrorDialog();
                         dialogo.show(getSupportFragmentManager(),"communication error");
                     }
                 }){
