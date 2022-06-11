@@ -100,6 +100,32 @@ y de domicilio.</string>
     <string name="dialog_update_car_fail">Error al actualizar los datos.</string>
     <string name="dialog_update_car_confirm">¿Está seguro que desea eliminar este automóvil del sistema?</string>
     <string name="tvTitleCarAdd">Registrar automóvil</string>
+    <string name="brand1">VOLKS WAGEN</string>
+    <string name="brand2">CHEVROLET</string>
+    <string name="brand3">FORD</string>
+    <string name="brand4">KIA</string>
+    <string name="brand5">NISSAN</string>
+    <string name="brand6">GM</string>
+    <string name="brand7">ITALIKA</string>
+    <string name="brand8">VENTO</string>
+    <string name="brand9">CHRYSLER</string>
+    <string name="brand10">HONDA</string>
+    <string name="brand11">HYUNDAI</string>
+    <array name="arrayCarBrands">
+        <item>@string/brand1</item>
+        <item>@string/brand2</item>
+        <item>@string/brand3</item>
+        <item>@string/brand4</item>
+        <item>@string/brand5</item>
+        <item>@string/brand6</item>
+        <item>@string/brand7</item>
+        <item>@string/brand8</item>
+        <item>@string/brand9</item>
+        <item>@string/brand10</item>
+        <item>@string/brand11</item>
+    </array>
+    <string name="dialog_create_car_success">Vehículo registrado con éxito.</string>
+    <string name="dialog_create_car_fail">Error al registrar vehículo.</string>
 
     <!--Reportes-->
     <string name="tvTitleReportes">Reportes</string>

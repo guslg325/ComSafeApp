@@ -77,7 +77,6 @@ public class CarsFragment extends Fragment implements OnClickListener{
     public void onClick(View v){
         switch(v.getId()){
             case R.id.btnAddAutomoviles:
-                //TODO intent to add car
                 Intent itn = new Intent(getContext(), CarAddActivity.class);
                 startActivity(itn);
                 break;
