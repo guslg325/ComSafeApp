@@ -3,6 +3,9 @@ package ViewController;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.*;
 import android.view.View.OnClickListener;
@@ -102,8 +105,22 @@ public class CarEditActivity extends AppCompatActivity implements OnClickListene
                 updateCar(spinner.getSelectedItem().toString(),tvPlaca.getText().toString());
                 break;
             case R.id.btnCarDelete:
-                DialogFragment dialogo = new DeleteConfirmationDialog();
-                dialogo.show(getSupportFragmentManager(),"car delete");
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setMessage(R.string.dialog_update_car_confirm);
+                builder.setPositiveButton(R.string.accept, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                deleteCar();
+                            }
+                        });
+                builder.setNegativeButton(R.string.btnCancel, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int id) {
+                                //Dismiss dialog without changes
+                            }
+                        });
+                builder.setTitle(R.string.dialog_warning_title);
+
+                builder.create().show();
                 break;
             default:
         }
@@ -149,6 +166,56 @@ public class CarEditActivity extends AppCompatActivity implements OnClickListene
                 Map<String,String> parametros = new HashMap<String,String>();
                 parametros.put("color",c);
                 parametros.put("placas",p);
+                return parametros;
+            }
+        };
+
+        RequestQueue rq = Volley.newRequestQueue(this);
+        rq.add(sr);
+    }
+
+    void deleteCar(){
+        String url = getString(R.string.dbAPI) + "deleteCar.php/";
+
+        StringRequest sr = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                if(!response.isEmpty()){
+                    //Si existen datos
+                    try{
+                        JSONObject jsonobj = new JSONObject(response);
+                        if(jsonobj.getBoolean("status")){
+                            if(jsonobj.getBoolean("status2")){
+                                //Correct update
+                                DialogFragment success = new UpdateSuccessfulDialog();
+                                success.show(getSupportFragmentManager(),"delete success");
+                            }
+                        }else{
+                            //Error en update
+                            DialogFragment fail = new UpdateFailureDialog();
+                            fail.show(getSupportFragmentManager(),"delete failed");
+                        }
+                    }catch(Exception e){
+                        Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_LONG).show();
+                    }
+                }else{
+                    //Error
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                //Poner dialogo de error
+                DialogFragment dialogo = new ComErrorDialog();
+                dialogo.show(getSupportFragmentManager(),"communication error");
+            }
+        }){
+            @Nullable
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                //(placas,modelo,marca,color,numcontrato,curp)
+                Map<String,String> parametros = new HashMap<String,String>();
+                parametros.put("placas",tvPlaca.getText().toString());
                 return parametros;
             }
         };

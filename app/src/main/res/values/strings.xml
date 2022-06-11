@@ -32,7 +32,7 @@ y de domicilio.</string>
     <!--Main menu-->
     <string name="tvTitleMainMenu">Inicio</string>
     <string name="bienvenida">Bienvenido</string>
-    <string name="btnMore">Ver más...</string>
+    <string name="btnMore">Ver más &#8230;</string>
     <string name="visitas">Visitas</string>
     <string name="reservas">Reservas</string>
     <string name="automoviles">Automóviles</string>
@@ -74,6 +74,7 @@ y de domicilio.</string>
     <string name="tvSubtitleAutomoviles">Automoviles registrados</string>
     <string name="tvInstructionsAutomoviles">Seleccione uno de sus automoviles para modificar su información o agregue uno nuevo con el botón +.</string>
     <string name="dialog_session_error_msj">El usuario activo no tiene CURP asociada. Cierre sesión y vuelva a intentarlo.</string>
+    <string name="tvEmptyCarList">Ningún automóvil registrado en esta cuenta.</string>
     <string name="tvTitleCarEdit">Editar automóvil</string>
     <string name="tvBrandTag">Marca de automóvil</string>
     <string name="tvModelTag">Modelo de automóvil</string>

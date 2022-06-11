@@ -25,6 +25,7 @@ public class CarsFragment extends Fragment implements OnClickListener{
     SharedPreferences sp;
     Boolean status;
     String model,brand,plates,carColor;
+    TextView emptyListMessage;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -39,6 +40,7 @@ public class CarsFragment extends Fragment implements OnClickListener{
         lvRegAutomoviles = rootView.findViewById(R.id.lvRegistroAutomoviles);
         cadapter = new CarAdapter(getContext(),R.layout.car_row);
         sp = rootView.getContext().getSharedPreferences("preferencias", Context.MODE_PRIVATE);
+        emptyListMessage = rootView.findViewById(R.id.tvEmptyCarList);
 
         btnAddCar.setOnClickListener(this);
         lvRegAutomoviles.setAdapter(cadapter);
@@ -104,22 +106,26 @@ public class CarsFragment extends Fragment implements OnClickListener{
                             JSONObject jsonobj = new JSONObject(response);
                             JSONArray keys = jsonobj.names();
                             status = Boolean.parseBoolean(jsonobj.getString("status"));
-                            for(int i = 1; i < keys.length(); i++){
-                                JSONObject obj = jsonobj.getJSONObject(keys.getString(i));
-                                plates = obj.getString("placas");
-                                model = obj.getString("modelo");
-                                brand = obj.getString("marca");
-                                carColor = obj.getString("color");
+                            if(status){
+                                for(int i = 1; i < keys.length(); i++){
+                                    JSONObject obj = jsonobj.getJSONObject(keys.getString(i));
+                                    plates = obj.getString("placas");
+                                    model = obj.getString("modelo");
+                                    brand = obj.getString("marca");
+                                    carColor = obj.getString("color");
 
-                                Car nuevo = new Car(plates,model,brand,carColor);
-                                cadapter.add(nuevo);
+                                    Car nuevo = new Car(plates,model,brand,carColor);
+                                    cadapter.add(nuevo);
+                                }
+                            }else{
+                                emptyListMessage.setVisibility(TextView.VISIBLE);
                             }
                         }catch(Exception e){
                             Toast.makeText(getContext(),e.getMessage(),Toast.LENGTH_LONG).show();
                         }
                     }else{
                         //No hay datos guardados
-                        //TODO poner mensaje de vacío
+                        emptyListMessage.setVisibility(TextView.VISIBLE);
                     }
                 }
             }, new Response.ErrorListener() {

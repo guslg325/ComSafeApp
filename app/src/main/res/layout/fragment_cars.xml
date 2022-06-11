@@ -43,7 +43,18 @@
         android:id="@+id/lvRegistroAutomoviles"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:visibility="visible"
         android:layout_below="@id/cvAutomoviles"
         android:layout_alignParentBottom="true"/>
+    <TextView
+        android:id="@+id/tvEmptyCarList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        android:padding="10dp"
+        android:text="@string/tvEmptyCarList"/>
 
 </RelativeLayout>

@@ -18,6 +18,7 @@ public class UpdateSuccessfulDialog extends DialogFragment {
                 .setPositiveButton(R.string.accept, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         //Good
+                        getActivity().finish();
                     }
                 })
                 .setTitle(R.string.dialog_warning_title);

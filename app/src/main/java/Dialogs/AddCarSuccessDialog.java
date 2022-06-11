@@ -16,6 +16,7 @@ public class AddCarSuccessDialog extends DialogFragment {
                 .setPositiveButton(R.string.accept, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         // START THE GAME!
+                        getActivity().finish();
                     }
                 })
                 .setTitle(R.string.dialog_warning_title);
