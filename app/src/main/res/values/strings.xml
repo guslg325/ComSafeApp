@@ -63,6 +63,7 @@ y de domicilio.</string>
     <string name="tvTitleVisitas">Visitas</string>
     <string name="tvSubtitleVisitas">Historial de visitas</string>
     <string name="tvInstructionsVisitas">Seleccione una visita que aún no haya finalizado para editarla o registre una nueva con el botón +.</string>
+    <string name="tvEmptyVisitList">Ningún automóvil registrado en esta cuenta.</string>
 
     <!--Reservas-->
     <string name="tvTitleReservas">Reservas</string>

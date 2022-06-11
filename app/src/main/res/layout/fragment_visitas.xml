@@ -44,5 +44,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/cvVisitas"/>
+    <TextView
+        android:id="@+id/tvEmptyVisitList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        android:padding="10dp"
+        android:text="@string/tvEmptyVisitList"/>
 
 </RelativeLayout>
