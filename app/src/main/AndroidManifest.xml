@@ -35,6 +35,9 @@
             android:name="ViewController.CarAddActivity"
             android:exported="true"/>
         <activity
+            android:name="ViewController.VisitEditActivity"
+            android:exported="true"/>
+        <activity
             android:name="ViewController.SplashScreen"
             android:exported="true"
             android:theme="@style/SplashScreenStyle">

@@ -21,7 +21,7 @@ public class VisitAdapter extends ArrayAdapter<Visit>{
         final Visit visit = getItem(i);
         vh.tvNombre.setText(visit.getName()+" "+visit.getPatern()+" "+visit.getMatern());
         vh.tvFecha.setText(visit.getDate().toString());
-        vh.tvId.setText(visit.getId()+"");
+        vh.tvId.setText(visit.getId());
         return v2;
     }
 

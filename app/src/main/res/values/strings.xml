@@ -40,7 +40,7 @@ y de domicilio.</string>
     <!--Profile-->
     <string name="tvTitleProfile">Mi información</string>
     <string name="tvNombreProfile">Nombre de usuario</string>
-    <string name="tvSubtitle1">Número de contacto</string>
+    <string name="tvSubtitle1">Número de contrato</string>
     <string name="tvSubtitle2">Datos de usuario</string>
     <string name="tvInfo1">7635280001-</string>
     <string name="tvInfo2">CURP</string>
@@ -63,7 +63,21 @@ y de domicilio.</string>
     <string name="tvTitleVisitas">Visitas</string>
     <string name="tvSubtitleVisitas">Historial de visitas</string>
     <string name="tvInstructionsVisitas">Seleccione una visita que aún no haya finalizado para editarla o registre una nueva con el botón +.</string>
-    <string name="tvEmptyVisitList">Ningún automóvil registrado en esta cuenta.</string>
+    <string name="tvEmptyVisitList">Ninguna visita registrada para esta cuenta.</string>
+    <string name="tvTitleVisitEdit">Editar visita</string>
+    <string name="tvVisitIdTag">ID de visita</string>
+    <string name="tvVisitNameTag">Nombre(s)</string>
+    <string name="tvVisitPaternTag">Apellido paterno</string>
+    <string name="tvVisitMaternTag">Apellido materno</string>
+    <string name="tvVisitDateTag">Fecha de visita</string>
+    <string name="tvVisitMediumTag">Medio de llegada</string>
+    <string name="tvVisitPlatesTag">Placas de vehículo de llegada</string>
+    <string name="medio1">AUTOMOVIL</string>
+    <string name="medio2">TRANSPORTE PÚBLICO</string>
+    <array name="mediumArray">
+        <item>@string/medio1</item>
+        <item>@string/medio2</item>
+    </array>
 
     <!--Reservas-->
     <string name="tvTitleReservas">Reservas</string>

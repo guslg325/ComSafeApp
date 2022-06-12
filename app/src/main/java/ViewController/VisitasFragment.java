@@ -24,9 +24,8 @@ public class VisitasFragment extends Fragment implements OnClickListener{
     VisitAdapter vadapter;
     SharedPreferences sp;
     Boolean status;
-    String nombre,paterno,materno,medio,placas;
+    String nombre,paterno,materno,medio,placas,id;
     Date fecha;
-    int id;
     TextView emptyListMessage;
 
     public VisitasFragment(){
@@ -54,18 +53,17 @@ public class VisitasFragment extends Fragment implements OnClickListener{
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Visit v = (Visit) adapterView.getItemAtPosition(i);
-                //TODO create VisitEditActivity
-                /*Intent itn = new Intent(getContext(),VisitEditActivity.class);
+                Intent itn = new Intent(getContext(),VisitEditActivity.class);
                 Bundle bdl = new Bundle();
                 bdl.putString("nombre",v.getName());
                 bdl.putString("paterno",v.getPatern());
                 bdl.putString("materno",v.getMatern());
                 bdl.putString("fecha",v.getDate().toString());
-                bdl.putInt("id",v.getId());
-                bdl.putString("mLlegada",v.getArriveMedium());
+                bdl.putString("id",v.getId());
+                bdl.putString("medio",v.getArriveMedium());
                 bdl.putString("placas",v.getPlates());
                 itn.putExtras(bdl);
-                startActivity(itn);*/
+                startActivity(itn);
             }
         });
 
@@ -117,7 +115,7 @@ public class VisitasFragment extends Fragment implements OnClickListener{
                             if(status){
                                 for(int i = 1; i < keys.length(); i++){
                                     JSONObject obj = jsonobj.getJSONObject(keys.getString(i));
-                                    id = obj.getInt("id");
+                                    id = obj.getString("id");
                                     fecha = Date.valueOf(obj.getString("fecha"));
                                     nombre = obj.getString("nombre");
                                     paterno = obj.getString("paterno");

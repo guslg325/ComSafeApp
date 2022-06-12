@@ -3,11 +3,10 @@ package LogicController;
 import java.util.Date;
 
 public class Visit {
-    int id;
     Date fecha;
-    String apPat,apMat,nombre,mLlegada,placas;
+    String apPat,apMat,nombre,mLlegada,placas,id;
 
-    public Visit(int id,Date arrival,String name,String patern,String matern,String medium,String plates){
+    public Visit(String id,Date arrival,String name,String patern,String matern,String medium,String plates){
         this.id = id;
         this.fecha = arrival;
         this.nombre = name;
@@ -17,7 +16,7 @@ public class Visit {
         this.placas = plates;
     }
 
-    public int getId(){
+    public String getId(){
         return id;
     }
 
