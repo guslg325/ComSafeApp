@@ -87,6 +87,8 @@ public class VisitasFragment extends Fragment implements OnClickListener{
         switch (v.getId()){
             case R.id.btnAddVisitas:
                 //TODO create activity VisitAddActivity
+                Intent itn = new Intent(getContext(),VisitAddActivity.class);
+                startActivity(itn);
                 break;
             default:
         }

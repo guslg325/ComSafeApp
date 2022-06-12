@@ -78,6 +78,7 @@ y de domicilio.</string>
         <item>@string/medio1</item>
         <item>@string/medio2</item>
     </array>
+    <string name="tvTitleVisitAdd">Registrar visita</string>
 
     <!--Reservas-->
     <string name="tvTitleReservas">Reservas</string>
