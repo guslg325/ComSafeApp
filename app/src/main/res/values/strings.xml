@@ -2,7 +2,7 @@
     <!--Configuracion-->
     <string name="app_name">ComSafe</string>
     <string name="project_name">ComSafe Mobile Client</string>
-    <string name="app_version">0.0.1</string>
+    <string name="app_version">0.0.2</string>
     <string name="developedApp">Aplicación desarrollada por:</string>
     <string name="developer1">Gustavo López González</string>
     <string name="developedWeb">Sitio web desarrollado por:</string>

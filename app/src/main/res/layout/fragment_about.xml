@@ -11,13 +11,14 @@
             android:layout_width="300dp"
             android:layout_height="300dp"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/ic_logo_vertical"/>
+            style="@style/imgLoginStyle"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textSize="30sp"
-            android:text="@string/project_name"/>
+            android:text="@string/project_name"
+            style="@style/styleAppName"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
